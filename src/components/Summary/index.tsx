@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import incomeImg from "../../assets/income.svg";
 import outcomeImg from "../../assets/outcome.svg";
 import totalImg from "../../assets/total.svg";
@@ -16,8 +16,7 @@ interface Transaction {
 }
 
 export function Summary() {
-  const data = useContext(TransactionsContext);
-  const [transactions, setTransactions] = useState<Transaction[]>([])
+  const transactions = useContext(TransactionsContext)
 
   return (
     <Container>
